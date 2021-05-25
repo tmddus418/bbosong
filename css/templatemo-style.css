@@ -13,7 +13,7 @@ body {
 body::-webkit-scrollbar {
   width: 8px;
   height: 8px;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: white;
 }
 /* Add a thumb */
 body::-webkit-scrollbar-thumb {
@@ -587,7 +587,7 @@ footer a:hover {
 
 
 .masonry-portfolio .container-fluid {
-  padding-right: 0px;
+  padding-right: px;
   padding-left: 0px;
 }
 
@@ -622,6 +622,7 @@ footer a:hover {
 
 .masonry .item .thumb {
   position: relative;
+  color:white;
 }
 
 .masonry .item .hover-effect .hover-content {
@@ -630,7 +631,14 @@ footer a:hover {
     width: 100%;
     bottom: 5px;
     left: 0;
+    z-index: 1;
+    color:white;
+    
 }
+
+.masonry .item:hover .thumb {
+  filter:brightness(70%);
+ }
 
 
 .masonry .item h1 {
@@ -644,15 +652,19 @@ footer a:hover {
   transform: translateY(25px);
   transition: .5s ease-in-out;
   letter-spacing: 0.5px;
+  z-index: 100;
  }
 
 .masonry .item em {
   font-style: normal;
   font-weight: 200;
+  z-index: 100;
  }
 
 .masonry .item:hover h1 {
   transform: translateY(0);
+  color:white;
+  z-index: 100;
  }
 
 .masonry .item p {
@@ -662,9 +674,10 @@ footer a:hover {
   font-size: 14px;
   color: #fff;
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(5px);
   transition: .5s ease-in-out;
   text-transform: uppercase;
+  z-index: 100;
  }
 
 .masonry .item {
@@ -677,6 +690,8 @@ footer a:hover {
 .masonry .item:hover p {
   opacity: 1;
   transform: translateY(0);
+  color:white;
+  z-index: 100;
  }
 
 
